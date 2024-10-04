@@ -1,0 +1,211 @@
+/* Estilo Global */
+:root {
+  /* Paleta 1: Roxo */
+  --cor-fundo: #f4f4f9;
+  --cor-texto: #333;
+  --cor-botao-principal: #6a1b9a;
+  --cor-botao-hover: #ab47bc;
+  --cor-borda: #8e24aa;
+  --cor-card-fundo: #ffffff;
+  --cor-input-fundo: #e1bee7;
+  --cor-card-hover: #f3e5f5;
+}
+
+/* Aplicação das variáveis globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Animação gradiente */
+@keyframes gradient {
+  0%, 100% {
+    background-color: var(--cor-botao-principal);
+  }
+  50% {
+    background-color: var(--cor-botao-hover);
+  }
+}
+
+/* Estilização da área de container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 85vh;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Estilização dos formulários */
+form {
+  display: flex;
+  flex-direction: column;
+  background: var(--cor-card-fundo);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  border: 2px solid transparent;
+  background-image: linear-gradient(var(--cor-card-fundo), var(--cor-card-fundo)), 
+                    linear-gradient(45deg, var(--cor-botao-principal), var(--cor-botao-hover));
+  background-clip: padding-box, border-box;
+  transition: transform 0.3s;
+}
+
+form:hover {
+  transform: scale(1.02);
+}
+
+form input {
+  background-color: var(--cor-input-fundo);
+  color: var(--cor-texto);
+  border-radius: 5px;
+  width: 100%;
+  height: 2.5rem;
+  text-align: center;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+}
+
+form input:focus {
+  border-color: var(--cor-botao-principal);
+  outline: none;
+}
+
+.botaoSubmit, .botaoReset {
+  margin-top: 1rem;
+  background-color: var(--cor-botao-principal);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s;
+}
+
+.botaoSubmit:hover, .botaoReset:hover {
+  background-color: var(--cor-botao-hover);
+  transform: scale(1.05);
+}
+
+/* Estilização dos cards */
+.veiculos-card,
+.form-card {
+  max-width: 30rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 1rem;
+  background: var(--cor-card-fundo);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(var(--cor-card-fundo), var(--cor-card-fundo)), 
+                    linear-gradient(45deg, var(--cor-botao-principal), var(--cor-botao-hover));
+  background-clip: padding-box, border-box;
+  transition: transform 0.3s, border-color 0.3s;
+  border: 4px solid transparent;
+  animation: snakeBorder 3s linear infinite;
+}
+
+.veiculos-card:hover, .form-card:hover {
+  transform: scale(1.02);
+}
+
+/* Lista de veículos */
+.veiculos-list {
+  list-style-type: none;
+  width: 100%;
+  padding: 0;
+}
+
+.carro-item {
+  border: 2px solid var(--cor-borda);
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  background-color: var(--cor-card-hover);
+}
+
+.carro-detalhes {
+  margin-bottom: 1rem;
+}
+
+.carro-acoes button {
+  background-color: var(--cor-borda);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+/* Estilização do cabeçalho */
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+h1, h2, h3 {
+  color: var(--cor-botao-principal);
+  border: 4px solid transparent;
+  padding: 0.5rem;
+}
+
+/* Estilização do rodapé */
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+/* Estilização dos quadrados de temas */
+.quadrado-temas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.quadrado-tema {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.quadrado-tema:hover {
+  transform: scale(1.1);
+}
+
+.roxo {
+  background-color: #6a1b9a;
+}
+
+.verde {
+  background-color: #43a047;
+}
+
+.laranja {
+  background-color: #ff9800;
+}

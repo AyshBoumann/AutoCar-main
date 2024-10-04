@@ -1,0 +1,32 @@
+{
+  "carros": [
+    {
+      "id": "1",
+      "marca": "Ford",
+      "modelo": "Mustang GT Performance 5.0 V8",
+      "preco": 529434000,
+      "ano": 2024
+    },
+    {
+      "id": "2",
+      "marca": "Chevrolet",
+      "modelo": "Camaro SS Collection 6.2 V8 16V",
+      "preco": 496204000,
+      "ano": 2024
+    },
+    {
+      "id": "3",
+      "marca": "Ferrari",
+      "modelo": "F8 Spider 3.9 V8 Bi-Turbo 720cv",
+      "preco": 4288593000,
+      "ano": 2022
+    },
+    {
+      "id": "4",
+      "marca": "Chevrolet",
+      "modelo": "C-20 Custom Std. 4.1",
+      "preco": 2819100,
+      "ano": 1996
+    }
+  ]
+}
